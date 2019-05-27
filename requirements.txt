@@ -1,0 +1,8 @@
+beautifulsoup4
+sklearn
+scipy
+pandas
+numpy
+tqdm
+nltk
+lxml
