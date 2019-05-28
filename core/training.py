@@ -55,7 +55,7 @@ def prep_train_feat(vectorizer_pick, qrel, topic, training_corpus, train_feat):
                 except:
                     print("Missing document with id: ", doc_name)
 
-    # dump_svmlight_file(tfidf, np.array(y), train_feat+'tfidf_feat_'+str(topic), multilabel=False)
+    dump_svmlight_file(tfidf, np.array(y), train_feat+'tfidf_feat_'+str(topic), multilabel=False)
 
     return tfidf.shape[1]
 
