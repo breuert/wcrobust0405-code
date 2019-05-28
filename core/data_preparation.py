@@ -47,12 +47,12 @@ def _parse_trec(full_path_file, tmp, dir_raw_txt):
 
         if name.endswith(tuple([".0z", ".1z", ".2z"])):
 
-            doc_path_tmp = tmp + name
-            shutil.copy(full_path_file, doc_path_tmp)
             end = '_' + os.path.splitext(name)[1][1]
+            doc_path_tmp = tmp + name[:-3] + end + name[-3:]
+            shutil.copy(full_path_file, doc_path_tmp)
             doc_path_tmp_uncompr = tmp + name[:-3] + end
             ending = name[-3:]
-            os.system("gzip -d -S " + ending + " " + doc_path_tmp + " > " + doc_path_tmp_uncompr)
+            os.system("gzip -d -S " + ending + " " + doc_path_tmp)
 
         if name.endswith(".z"):
 
