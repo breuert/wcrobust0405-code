@@ -1,10 +1,7 @@
 import shelve
 
 import core.data_preparation as dprep
-import core.evaluation as evaluation
 import core.feature_preparation as fprep
-import core.prediction as pred
-import core.ranking as rank
 import core.tfidf_vectorization as tfidf_vec
 import core.util as util
 import core.training as train
@@ -60,7 +57,7 @@ def main():
             dprep.unify(path['union_times_robust_aquaint'], corpora)
 
     # Generate tfidf-vectorizer
-    if robust_only:  # Time needed for making tfidf-matrix:  502.2863485813141
+    if robust_only:
         tfidf_vec.dump_tfidf_vectorizer(file['vectorizer_times_robust0405'], path['union_robust_aquaint'])
     else:
         tfidf_vec.dump_tfidf_vectorizer(file['vectorizer_times_robust0405'], path['union_times_robust_aquaint'])

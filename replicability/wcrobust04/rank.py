@@ -8,8 +8,6 @@ import core.training as train
 
 from config.config import path, file
 
-robust_only = True  # train only with robust data
-
 
 def main():
 

@@ -32,7 +32,7 @@ def main():
     # util.delete_shelve(file['feat_times_robust04'])
 
     if data_prep:
-        # Extract single raw text document files from Washington Post JSON-lines file
+        # Extract single raw text document files from New York Times
         dprep.raw_text_from_times(path['times_compr'], path['tmp_extract'], path['times_raw'])
         dprep.clean_raw_text(path['times_raw'], path['times'])
         util.clear_path([path['times_raw']])

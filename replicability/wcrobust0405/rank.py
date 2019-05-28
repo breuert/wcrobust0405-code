@@ -1,17 +1,12 @@
 import shelve
 
-import core.data_preparation as dprep
 import core.evaluation as evaluation
-import core.feature_preparation as fprep
 import core.prediction as pred
 import core.ranking as rank
-import core.tfidf_vectorization as tfidf_vec
 import core.util as util
 import core.training as train
 
 from config.config import path, file
-
-robust_only = True  # train only with robust data
 
 
 def main():
