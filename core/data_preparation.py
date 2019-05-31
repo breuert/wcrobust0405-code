@@ -37,6 +37,12 @@ def unify(union, corpora_list):
 def _parse_trec(full_path_file, tmp, dir_raw_txt):
 
     skip_list = [
+        'credtd.z',
+        'crhdtd.z',
+        'fr94dtd.z',
+        'ftdtd.z',
+        'readfrcg.z',
+        'readmeft.z',
         'readchg.z',
         'readmefr.z'
     ]
@@ -155,8 +161,12 @@ def raw_text_from_trec(trec_data, tmp, dir_raw_txt):
     cores = cpu_count()
     p = Pool(cores)
 
+    skip = set(['cr'])
+
     full_path = []
     for path, subdirs, files in os.walk(trec_data):
+
+        subdirs[:] = [s for s in subdirs if s not in skip]
 
         extensions = tuple([".z", ".0z", ".1z", ".2z", ".gz"])
         files = [fi for fi in files if fi.endswith(extensions)]
