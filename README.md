@@ -54,11 +54,20 @@ TODO: add outcomes
 
 ## Implementation
 
+The following is a quick breakdown of what happens in each of the scripts in this repo.
+
 ### Dockerfile
+
+The `Dockerfile` installs `python3`, copies scripts for corresponding hooks and makes required directory. The working directory is set to  `/work/`
 
 ### init
 
+The `init` [script](init) will download the code from a [repository](https://github.com/breuert/wcrobust0405-code/) and installs required Python packages from the requirements.txt [file](https://github.com/breuert/wcrobust0405-code/blob/master/requirements.txt). Depending on the specified run, scripts for WCRobust04 or WCRobust0405 will be prepared.
+
 ### index
+
+The `index` [script](index) runs a subprocess with starts indexing.
 
 ### search
 
+The `search` [script](search) will start the ranking depending on the previously specified run.
