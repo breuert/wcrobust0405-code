@@ -54,7 +54,7 @@ TODO: add outcomes
 
 ## Implementation
 
-The following is a quick breakdown of what happens in each of the scripts in this repo.
+The following is a short summary of what happens in each of the scripts in this repo.
 
 ### Dockerfile
 
