@@ -14,7 +14,7 @@ def main():
     print("Start ranking for WCRobust0405")
     # Find intersecting topics
     qrel_files = [file['qrel_times'], file['qrel_robust'], file['qrel_aquaint']]
-    topics = util.find_inter_top(qrel_files)
+    topics = util.find_inter_top(qrel_files[:2])
 
     # Merge qrel files from Robust04 and Robust05
     util.merge_qrels(qrel_files[1:], file['qrel_robust_aquaint'])
