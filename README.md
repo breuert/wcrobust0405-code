@@ -13,8 +13,8 @@ This image is available on [Docker Hub](https://hub.docker.com/r/osirrc2019/irc-
 
 ## Quick Start
 
-Use the commands below to get the runs for WCRobust04 and WCRobust0405 as they were
-replicated in the course of our participation in [CENTRE@CLEF19](http://www.centre-eval.org/clef2019/).
+Use the commands below to get the runs for [WCRobust04 and WCRobust0405](https://trec.nist.gov/pubs/trec26/papers/WaterlooCormack-CC.pdf) as they were replicated in the course of our participation in [CENTRE@CLEF19](http://www.centre-eval.org/clef2019/). <br>
+
 The following `jig` command can be used to index the New York Times corpus and prepare training data for WCRobust04:
 
 ```
