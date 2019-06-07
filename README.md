@@ -37,7 +37,7 @@ python run.py prepare \
     --opts run="wcrobust0405"
 ```
 
-The following `jig` command can be used to perform a retrieval run on the collection with the `robust04` test collection.
+The following `jig` command can be used to perform a retrieval run on the New York Times depending on the previously defined training corpora.
 
 ```
 python run.py search \
