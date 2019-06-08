@@ -26,7 +26,7 @@ paths_to_check = [
 
 def main():
 
-    print("Start indexing for WCRobust04")
+    print("Start indexing for WCRobust0405")
     # Setup directories
     util.check_path(paths_to_check)
     # Delete old shelve with features, if existent
@@ -67,7 +67,7 @@ def main():
 
     # Find intersecting topics
     qrel_files = [file['qrel_times'], file['qrel_robust'], file['qrel_aquaint']]
-    topics = util.find_inter_top(qrel_files)
+    topics = util.find_inter_top(qrel_files[:2])
 
     # Merge qrel files from Robust04 and Robust05
     util.merge_qrels(qrel_files[1:], file['qrel_robust_aquaint'])
